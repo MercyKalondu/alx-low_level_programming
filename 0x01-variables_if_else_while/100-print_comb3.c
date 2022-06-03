@@ -9,22 +9,22 @@
  */
 int main(void)
 {
-	int a;
-	int b;
+	int digit1, digit2;
 
-	for (a = 48; a <= 57; a++)
+	for (digit1 = 0; digit1 < 9; digit1++)
 	{
-		for (b = 48; b <= 57; b++)
+		for (digit2 = digit1 + 1; digit2 < 10; digit2++)
 		{
-			putchar(a);
-			putchar(b);
-			if (a + b < 114)
-			{
-				putchar(44);
-				putchar(32);
-			}
+			putchar((digit1 % 10) + '0');
+			putchar((digit2 % 10) + '0');
+
+			if (digit1 == 8 && digit2 == 9)
+				continue;
+
+			putchar(',');
+			putchar(' ');
 		}
 	}
-	putchar(10);
+	putchar('\n');
 	return (0);
 }
