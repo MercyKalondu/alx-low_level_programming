@@ -3,7 +3,8 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - Prints random number and state
+ * whether it is positive, negative or zero.
  *
  * Return : Always 0 (Success)
  */
