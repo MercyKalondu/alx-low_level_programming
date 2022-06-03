@@ -1,5 +1,5 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 
 /**
@@ -14,7 +14,7 @@ int main(void)
 	while (num <= '9')
 	{
 		putchar(num)
-			num++;
+		num++;
 	}
 	putchar('\n');
 	return (0);
