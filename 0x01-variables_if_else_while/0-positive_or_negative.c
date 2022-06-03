@@ -3,7 +3,9 @@
 #include <stdio.h>
 
 /**
- * main - Prints random number and state
+ * main - Entry point
+ * 
+ * Description: Prints random number and state
  * whether it is positive, negative or zero.
  *
  * Return : Always 0 (Success)
