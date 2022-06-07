@@ -1,20 +1,22 @@
+#include <studio.h>
 #include "main.h"
 
 /**
- * main - Entry point
+ * main - print putchar
+ * Description: program that prints putchar
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	char *sh = "_putchar";
+	char text[9] = "_putchar";
+	int i = 0;
 
-	while (*sh)
+	for (i = 0; i <= 7; i++)
 	{
-		_putchar(*sh);
-		sh++;
+		putchar(text[i]);
 	}
-	_putchar('\n');
+	putchar('\n');
 
 	return (0);
 }
