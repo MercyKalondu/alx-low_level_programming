@@ -2,7 +2,7 @@
 
 /**
  * add - Adds two values
- * @n1: The first number 
+ * @n1: The first number
  * @n2: The second number
  *
  * Return: Integer value
