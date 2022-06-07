@@ -7,10 +7,13 @@
  */
 int main(void)
 {
-	putchar('m');
-	putchar('a');
-	putchar('i');
-	putchar('n');
+	char *sh = "Main";
+
+	while (*sh)
+	{
+		_putchar(*sh);
+		sh++;
+	}
 	_putchar('\n');
 
 	return (0);
