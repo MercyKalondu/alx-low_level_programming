@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print alphabet x10: Print x10 the alphabet
+ * print alphabet x10: print x10 times the alphabet
  *
  * Return: 0 (Success)
  */
@@ -17,7 +17,6 @@ void print_alphabet_x10(void)
 			_putchar(c);
 		}
 		_putchar('\n');
-
 		i++;
 	}
 }
