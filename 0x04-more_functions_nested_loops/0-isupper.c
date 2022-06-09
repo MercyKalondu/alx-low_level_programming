@@ -13,6 +13,6 @@ int _isupper(int c)
 	}
 	else
 	{
-		retuen (0);
+		return (0);
 	}
 }
