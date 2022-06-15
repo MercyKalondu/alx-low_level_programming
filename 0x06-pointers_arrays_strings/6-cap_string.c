@@ -5,29 +5,29 @@
  * @m: input string
  * Return: caps on first letter of a separator
  */
-char *cap_string(char *m)
+char *cap_string(char *n)
 {
 	int i, y;
 	int cap = 32;
 	int separators[] = {',', ';', '.', '?', '"', '(', ')', '{', '}', ' ', '\n', '\t'};
 
-	for (i = 0; m[i] != '\0'; i++)
+	for (i = 0; n[i] != '\0'; i++)
 	{
-		if (m[i] >= 'a' && m[i] <= 'z')
+		if (n[i] >= 'a' && n[i] <= 'z')
 		{
-			m[i] = m[i] - cap;
+			n[i] = n[i] - cap;
 		}
 
 		cap = 0;
 
 		for (y = 0; y <= 12; y++)
 		{
-			if (m[i] == separators[y])
+			if (n[i] == separators[y])
 			{
 				y = 12;
 				cap = 32;
 			}
 		}
 	}
-	return (m);
+	return (n);
 }
