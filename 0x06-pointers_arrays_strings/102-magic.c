@@ -1,5 +1,5 @@
 #include <stdio.h>
-/* Description: Instructions */
+
 int main(void)
 {
 	int n;
