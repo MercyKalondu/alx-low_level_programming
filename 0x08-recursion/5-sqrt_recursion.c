@@ -18,6 +18,7 @@ int _sqrt_recursion(int n)
  * @i: counter
  * Return: if square root
  */
+int squareroot(int n, int i)
 {
 	if (i < 1)
 		return (-1);
