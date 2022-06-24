@@ -6,7 +6,7 @@
  * @argv: array that contains the program command line arguments
  * Return: Always 0 (Success)
  */
-int main(int argc, char *argv[])
+int main(int argc, char *argc[])
 {
 	argc = 0;
 
