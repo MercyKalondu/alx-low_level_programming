@@ -28,41 +28,41 @@ void ch_free_grid(char **grid, unsigned int height)
  */
 char **strtow(char *str)
 {
-	char **a;
-	unsigned int c, height, i, j, b1;
+	char **aout;
+	unsigned int c, height, i, j, a1;
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
 	for (c = height = 0; str[c] != '\0'; c++)
 		if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
 			height++;
-	a = malloc((height + 1) * sizeof(char *));
-	if (a == NULL || height == 0)
+	aout = malloc((height + 1) * sizeof(char *));
+	if (aout == NULL || height == 0)
 	{
-		free(a);
+		free(aout);
 		return (NULL);
 	}
-	for (i = b = 0; i < height; i++)
+	for (i = a1 = 0; i < height; i++)
 	{
-		for (c = b; str[c] != '\0'; c++)
+		for (c = a1; str[c] != '\0'; c++)
 		{
 			if (str[c] == ' ')
-				b++;
+				a1++;
 			if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
 			{
-				a[i] = malloc((c - b + 2) * sizeof(char));
-				if (a[i] == NULL)
+				aout[i] = malloc((c - a1 + 2) * sizeof(char));
+				if (aout[i] == NULL)
 				{
-					ch_free_grid(a, i);
+					ch_free_grid(aout, i);
 					return (NULL);
 				}
 				break;
 			}
 		}
-		for (j = 0; b <= c; b++, j++)
-			a[i][j] = str[b];
-		a[i][j] = '\0';
+		for (j = 0; a1 <= c; a1++, j++)
+			aout[i][j] = str[b];
+		aout[i][j] = '\0';
 	}
-	a[i] = NULL;
-	return (a);
+	aout[i] = NULL;
+	return (aout);
 }
