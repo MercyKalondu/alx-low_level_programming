@@ -12,19 +12,21 @@
  * if min > max, return NULL
  * if malloc fails, return NULL
  */
-int *array_range(int min, int max);
+int *array_range(int min, int max)
 {
-	int *arr;
+	int *a;
 	int i;
 
 	if (min > max)
 		return (NULL);
-	arr = malloc(sizeof(*arr) * ((max - min) + 1));
 
-	if (arr == NULL)
+	a = malloc(sizeof(*a) * ((max - min) + 1));
+
+	if (a == NULL)
 		return (NULL);
-	for (i = 0; min <= max; i++, min++)
-		arr[i] = min;
 
-	return (arr);
+	for (i = 0; min <= max; i++, min++)
+		a[i] = min;
+
+	return (a);
 }
